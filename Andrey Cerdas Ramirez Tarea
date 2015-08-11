@@ -1,0 +1,214 @@
+package tarea.datos;
+
+public class Alumno {
+    public String nombre;
+    public int edad;
+    public int cursos;
+    public int promedio;
+    public int grado;
+    
+    public Alumno(){
+        
+    }
+    public void todosLosDatos(){
+        System.out.println("Nombre del alumno: "+nombre);
+        System.out.println("Edad del alumno: "+edad);
+        System.out.println("Cursos del alumno: "+cursos);
+        System.out.println("Promedio del alumno: "+promedio);
+        System.out.println("Grado del alumno: "+grado);
+        
+    }
+    public void buenEstudiante(){
+        if(85<promedio){
+            System.out.println("Es Buen estudiante");
+        }else{
+            System.out.println("No Es Buen Estudiante");
+        }
+    }
+    public void cursaUltimoGrado(){
+       if(grado==6){
+           System.out.println("Si cursa el ultimo grado");
+       }else{
+           System.out.println("No cursa el ultimo grado");
+       } 
+    }
+    public void primerGrado(){
+        if(grado==1){
+            System.out.println("Cursa el primer grado");
+        }else{
+            System.out.println("No cursa el primer grado");
+        }
+    }
+    public void todosLosCursos(){
+        if(cursos==6){
+            System.out.println("Lleva todos los cursos");
+        }else{
+            System.out.println("No lleva todos sus cursos");
+        }
+    }
+
+    public int getGrado() {
+        return grado;
+    }
+
+    public void setGrado(int grado) {
+        this.grado = grado;
+    }
+
+    public int getPromedio() {
+        return promedio;
+    }
+
+    public void setPromedio(int promedio) {
+        this.promedio = promedio;
+    }
+   
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public int getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(int cursos) {
+        this.cursos = cursos;
+    }
+
+    public Alumno(String nombre, int edad, int cursos, int promedio, int grado) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.cursos = cursos;
+        this.promedio = promedio;
+        this.grado = grado;
+    }
+
+    
+    
+}
+///////////////////////////////////////////////////////////////////////////////////////
+
+package tarea.datos;
+
+public class Camion {
+    public int placa;
+    public String color;
+    public int altura;
+    public int velocidad_maxima;
+    public String marca;
+    
+    public Camion(){
+        
+    }
+    public void esVeloz(){
+        if(velocidad_maxima>80){
+            System.out.println("camion es apto");
+        }else{
+            System.out.println("camion no es apto");
+        }
+    }
+    public void placaCorrecta(){
+        if(placa<99999999){
+            System.out.println("Placa esta correcta");
+        }else{
+            System.out.println("Placa esta Incorrecta");
+        }
+    }
+    public void tamañoIndicado(int indicada){
+        if(altura<=indicada){
+            System.out.println("La altura es la indicada");
+        }else{
+            System.out.println("La altura no es la indicada");
+        }
+    }
+    public void colorPreferido(String colorPreferido){
+        if(color==colorPreferido){
+            System.out.println("Es del color preferido del cliente");
+        }else{
+            System.out.println("No es del color preferido del cliente");
+        }
+    }
+    public void marcaRequerida(String marcaPreferida){
+        if(marca==marcaPreferida){
+            System.out.println("Es la marca requerida");
+        }else{
+            System.out.println("No es la marca requerida");
+        }
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public int getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(int placa) {
+        this.placa = placa;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+
+    public int getVelocidad_maxima() {
+        return velocidad_maxima;
+    }
+
+    public void setVelocidad_maxima(int velocidad_maxima) {
+        this.velocidad_maxima = velocidad_maxima;
+    }
+
+    public Camion(int placa, String color, int altura, int velocidad_maxima, String marca) {
+        this.placa = placa;
+        this.color = color;
+        this.altura = altura;
+        this.velocidad_maxima = velocidad_maxima;
+        this.marca = marca;
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+package tarea.datos;
+
+public class TareaDatos {
+    
+    public static void main(String[] args) {
+        Camion b=new Camion(12345678,"azul",12,150,"toyota");
+        b.colorPreferido("azul");
+        Alumno a=new Alumno("Andrey",22,2,98,4);
+        a.todosLosDatos();
+     
+             
+    }
+    
+}
